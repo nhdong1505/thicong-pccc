@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "settings": {
+      "color": { "palette": [
+        { "slug": "brand", "color": "#2042ff", "name": "Brand" },
+        { "slug": "accent", "color": "#ff4081", "name": "Accent" }
+      ]},
+      "typography": { "fontFamilies": [
+        { "slug": "inter", "fontFamily": "Inter, system-ui", "name": "Inter" }
+      ]}
+    },
+    "styles": { "typography": { "fontFamily": "var(--wp--preset--font-family--inter)" } }
+  }

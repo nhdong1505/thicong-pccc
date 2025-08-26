@@ -1,0 +1,24 @@
+services:
+  db:
+    image: mariadb:10.6
+    environment:
+      - MYSQL_DATABASE=wp
+      - MYSQL_USER=wp
+      - MYSQL_PASSWORD=wp
+      - MYSQL_ROOT_PASSWORD=wp
+    volumes: [ db:/var/lib/mysql ]
+  wp:
+    image: wordpress:php8.2-apache
+    ports: [ "8080:80" ]
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wp
+      - WORDPRESS_DB_PASSWORD=wp
+      - WORDPRESS_DB_NAME=wp
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+  phpmyadmin:
+    image: phpmyadmin
+    ports: [ "8081:80" ]
+    environment: [ PMA_HOST=db ]
+volumes: { db: {} }

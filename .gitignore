@@ -1,0 +1,6 @@
+/wp-admin/
+/wp-includes/
+/wp-content/uploads/*
+/node_modules/
+/vendor/
+.env
