@@ -1,38 +1,70 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
 import { __ } from '@wordpress/i18n';
+import { useBlockProps, MediaUpload, InspectorControls, RichText, URLInputButton } from '@wordpress/block-editor';
+import { PanelBody, Button, TextControl } from '@wordpress/components';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps } from '@wordpress/block-editor';
+export default function Edit( { attributes, setAttributes } ) {
+	const { title, subtitle, buttonText, buttonUrl, mediaURL } = attributes;
+	const blockProps = useBlockProps({
+		className: 'my-hero',
+		style: {
+			backgroundImage: mediaURL ? `url(${ mediaURL })` : undefined,
+			backgroundSize: 'cover',
+			backgroundPosition: 'center',
+			padding: '80px 24px',
+			borderRadius: '12px'
+		}
+	});
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './editor.scss';
-
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {Element} Element to render.
- */
-export default function Edit() {
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'My Hero – hello from the editor!', 'my-hero' ) }
-		</p>
+		<>
+			<InspectorControls>
+				<PanelBody title={ __('Hero settings', 'my-hero-block') } initialOpen={ true }>
+					<MediaUpload
+						onSelect={ ( media ) => setAttributes({ mediaURL: media.url }) }
+						render={ ( { open } ) => (
+							<Button variant="secondary" onClick={ open }>{ __('Chọn ảnh nền', 'my-hero-block') }</Button>
+						) }
+					/>
+					<TextControl
+						label={ __('Button URL', 'my-hero-block') }
+						value={ buttonUrl }
+						onChange={ ( v ) => setAttributes({ buttonUrl: v }) }
+					/>
+				</PanelBody>
+			</InspectorControls>
+
+			<div { ...blockProps }>
+				<RichText
+					tagName="h1"
+					className="my-hero__title"
+					value={ title }
+					onChange={ ( v ) => setAttributes({ title: v }) }
+					placeholder={ __('Nhập tiêu đề…', 'my-hero-block') }
+				/>
+				<RichText
+					tagName="p"
+					className="my-hero__subtitle"
+					value={ subtitle }
+					onChange={ ( v ) => setAttributes({ subtitle: v }) }
+					placeholder={ __('Nhập mô tả…', 'my-hero-block') }
+				/>
+				<div className="my-hero__cta">
+					<RichText
+						tagName="a"
+						className="wp-block-button__link"
+						value={ buttonText }
+						onChange={ ( v ) => setAttributes({ buttonText: v }) }
+						onSplit={ () => null }
+						placeholder={ __('Nhãn nút…', 'my-hero-block') }
+						allowedFormats={ [] }
+						attributes={{ href: buttonUrl }}
+					/>
+					<URLInputButton
+						url={ buttonUrl }
+						onChange={ ( url ) => setAttributes({ buttonUrl: url }) }
+					/>
+				</div>
+			</div>
+		</>
 	);
 }

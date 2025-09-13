@@ -1,12 +1,8 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.my-hero {
+	color: #0f172a;
+	text-align: left;
 
-.wp-block-create-block-my-hero {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	&__title { font-size: clamp(32px, 5vw, 56px); line-height: 1.1; margin: 0 0 12px; }
+	&__subtitle { font-size: clamp(16px, 2.2vw, 20px); opacity: .9; margin: 0 0 20px; }
+	&__cta .wp-block-button__link { display: inline-block; padding: 12px 20px; border-radius: 10px; background: #1e40af; color: #fff; text-decoration: none; }
 }
