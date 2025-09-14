@@ -120,6 +120,10 @@ function builder_and_developer_register_block_patterns() {
 			'title'    => __( 'Theme Button', 'builder-and-developer' ),
 			'categories' => array( 'builder-and-developer-theme-button' ),
 		),
+		'home-products-listing' => array(
+			'title'    => __( 'Home Products Listing', 'builder-and-developer' ),
+			'categories' => array( 'builder-and-developer-product-section' ),
+		),
 	);
 
 	$block_pattern_categories = array(

@@ -567,6 +567,7 @@ nav.woocommerce-MyAccount-navigation ul li a, .woocommerce-info a, .woocommerce-
   opacity: 0.2;
   position: relative;
   z-index: 2;
+  opacity: 0;
 }
 .banner-section .banner-left-cont .banner-btns{
   gap: 0;
@@ -641,6 +642,7 @@ nav.woocommerce-MyAccount-navigation ul li a, .woocommerce-info a, .woocommerce-
   clip-path: polygon(65% 70%, 85% 30%, 100% 100%, 0 100%, 10% 70%);
   position: relative;
   z-index: 1;
+  padding-bottom: 6px !important;
 }
 .banner-section .banner-navigation .banner-nav-outer{
   position: relative !important;
@@ -1926,7 +1928,7 @@ a.wc-block-components-checkout-return-to-cart-button{
 /*RESPONSIVE MEDIA*/
 @media screen and (max-width:767px) {
   .home .main-header-section{
-    position: static;
+    position: absolute;
     background-color: #ffffff !important;
   }
   .home .header-section .header-inner-section{
@@ -2590,7 +2592,7 @@ a.wc-block-components-checkout-return-to-cart-button{
     margin-bottom: 90px !important;
   }
   .banner-section .banner-cont-outer-box{
-    margin-bottom: 50px !important;
+    margin-bottom: 30px !important;
   }
   .banner-section .banner-right-box2{
     width: 30%;
@@ -2620,7 +2622,7 @@ a.wc-block-components-checkout-return-to-cart-button{
     margin-bottom: 70px !important;
   }
   .banner-section .banner-cont-outer-box{
-    margin-bottom: 50px !important;
+    margin-bottom: 30px !important;
   }
   .banner-section .banner-right-box2{
     width: 25%;
@@ -2628,4 +2630,7 @@ a.wc-block-components-checkout-return-to-cart-button{
   .banner-section .banner-right-box1{
     width: 31%;
   }
+}
+.banner-section .banner-cont-outer-box{
+  margin-bottom: 170px !important;
 }
