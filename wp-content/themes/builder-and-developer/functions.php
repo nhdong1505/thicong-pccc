@@ -80,6 +80,9 @@ add_action( 'after_setup_theme', 'builder_and_developer_setup' );
  * Enqueue scripts and styles.
  */
 function builder_and_developer_scripts() {
+	// Enqueue Google Fonts for Vietnamese support
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap', array(), null );
+	
 	wp_enqueue_style('builder-and-developer-style', get_stylesheet_uri(), array() );
 	wp_enqueue_script( 'jquery-wow', esc_url(get_template_directory_uri()) . '/js/wow.js', array('jquery') );
 	wp_enqueue_style( 'animate-css', esc_url(get_template_directory_uri()).'/css/animate.css' );

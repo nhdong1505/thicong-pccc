@@ -308,101 +308,19 @@
       "customFontSize": true,
       "fontFamilies": [
         {
-          "fontFace": [
-            {
-              "fontDisplay": "block",
-              "fontFamily": "Jost",
-              "fontStretch": "normal",
-              "fontStyle": "Thin",
-              "fontWeight": "100",
-              "src": [
-                "file:./fonts/Jost/static/Jost-Thin.ttf"
-              ]
-            },
-            {
-              "fontDisplay": "block",
-              "fontFamily": "Jost",
-              "fontStretch": "normal",
-              "fontStyle": "ExtraLight",
-              "fontWeight": "200",
-              "src": [
-                "file:./fonts/Jost/static/Jost-ExtraLight.ttf"
-              ]
-            },
-            {
-              "fontDisplay": "block",
-              "fontFamily": "Jost",
-              "fontStretch": "normal",
-              "fontStyle": "Light",
-              "fontWeight": "300",
-              "src": [
-                "file:./fonts/Jost/static/Jost-Light.ttf"
-              ]
-            },
-            {
-              "fontDisplay": "block",
-              "fontFamily": "Jost",
-              "fontStretch": "normal",
-              "fontStyle": "Regular",
-              "fontWeight": "400",
-              "src": [
-                "file:./fonts/Jost/static/Jost-Regular.ttf"
-              ]
-            },
-            {
-              "fontDisplay": "block",
-              "fontFamily": "Jost",
-              "fontStretch": "normal",
-              "fontStyle": "Medium",
-              "fontWeight": "500",
-              "src": [
-                "file:./fonts/Jost/static/Jost-Medium.ttf"
-              ]
-            },
-            {
-              "fontDisplay": "block",
-              "fontFamily": "Jost",
-              "fontStretch": "normal",
-              "fontStyle": "SemiBold",
-              "fontWeight": "600",
-              "src": [
-                "file:./fonts/Jost/static/Jost-SemiBold.ttf"
-              ]
-            },
-            {
-              "fontDisplay": "block",
-              "fontFamily": "Jost",
-              "fontStretch": "normal",
-              "fontStyle": "Bold",
-              "fontWeight": "700",
-              "src": [
-                "file:./fonts/Jost/static/Jost-Bold.ttf"
-              ]
-            },
-            {
-              "fontDisplay": "block",
-              "fontFamily": "Jost",
-              "fontStretch": "normal",
-              "fontStyle": "ExtraBold",
-              "fontWeight": "800",
-              "src": [
-                "file:./fonts/Jost/static/Jost-ExtraBold.ttf"
-              ]
-            },
-            {
-              "fontDisplay": "block",
-              "fontFamily": "Jost",
-              "fontStretch": "normal",
-              "fontStyle": "Black",
-              "fontWeight": "900",
-              "src": [
-                "file:./fonts/Jost/static/Jost-Black.ttf"
-              ]
-            }
-          ],
-          "fontFamily": "Jost, sans-serif",
-          "name": "Jost",
-          "slug": "jost"
+          "fontFamily": "Noto Sans, sans-serif",
+          "name": "Noto Sans",
+          "slug": "noto-sans"
+        },
+        {
+          "fontFamily": "Inter, sans-serif",
+          "name": "Inter",
+          "slug": "inter"
+        },
+        {
+          "fontFamily": "Roboto, sans-serif",
+          "name": "Roboto",
+          "slug": "roboto"
         }
       ],
       "fontSizes": [
@@ -480,7 +398,7 @@
       },
       "core/heading": {
         "typography": {
-          "fontFamily": "var:preset|font-family|jost",
+          "fontFamily": "var:preset|font-family|noto-sans",
           "fontStyle": "normal",
           "fontWeight": "600"
         }
@@ -753,7 +671,7 @@
       }
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--jost)",
+      "fontFamily": "var(--wp--preset--font-family--noto-sans)",
       "fontSize": "var(--wp--preset--font-size--normal)",
       "lineHeight": "var(--wp--custom--typography--line-height--paragraph)",
       "fontWeight": "var(--wp--custom--typography--font-weight--normal)"
