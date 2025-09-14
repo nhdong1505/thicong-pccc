@@ -1,6 +1,11 @@
-/wp-admin/
-/wp-includes/
-/wp-content/uploads/*
-/node_modules/
-/vendor/
-.env
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+.DS_Store
+*.log
+node_modules/
+dist/
+build/
+# ignore plugins bên thứ 3, giữ plugin tự viết
+wp-content/plugins/*
+!wp-content/plugins/your-custom-plugin/
