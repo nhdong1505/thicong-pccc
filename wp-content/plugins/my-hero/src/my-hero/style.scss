@@ -1,8 +1,0 @@
-.my-hero {
-	color: #0f172a;
-	text-align: left;
-
-	&__title { font-size: clamp(32px, 5vw, 56px); line-height: 1.1; margin: 0 0 12px; }
-	&__subtitle { font-size: clamp(16px, 2.2vw, 20px); opacity: .9; margin: 0 0 20px; }
-	&__cta .wp-block-button__link { display: inline-block; padding: 12px 20px; border-radius: 10px; background: #1e40af; color: #fff; text-decoration: none; }
-}
