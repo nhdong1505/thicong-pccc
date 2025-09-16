@@ -124,6 +124,11 @@ function builder_and_developer_register_block_patterns() {
 			'title'    => __( 'Home Products Listing', 'builder-and-developer' ),
 			'categories' => array( 'builder-and-developer-product-section' ),
 		),
+		'header-products-menu' => array(
+			'title'      => __( 'Header with Products Menu', 'builder-and-developer' ),
+			'categories' => array( 'builder-and-developer-headers' ),
+			'blockTypes' => array( 'parts/header' ),
+		),
 	);
 
 	$block_pattern_categories = array(

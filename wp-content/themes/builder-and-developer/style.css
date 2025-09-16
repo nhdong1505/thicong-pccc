@@ -1933,6 +1933,8 @@ a.wc-block-components-checkout-return-to-cart-button{
   }
   .home .header-section .header-inner-section{
     background-color: #ffffff !important;
+    width: 100%;
+    margin: 0px 10px !important;
   }
   .main-header-section{
     background-color: var(--wp--preset--color--primary);
@@ -2633,4 +2635,76 @@ a.wc-block-components-checkout-return-to-cart-button{
 }
 .banner-section .banner-cont-outer-box{
   margin-bottom: 170px !important;
+}
+
+/* Mobile responsive styles - Hide Book Now button and Logo on mobile */
+@media (max-width: 768px) {
+  .header-right-box {
+    display: none !important;
+  }
+  
+  .header-logo {
+    display: none !important;
+  }
+  
+  .header-menu {
+    flex-basis: 100% !important; /* Menu chiếm toàn bộ width khi ẩn logo và Book Now */
+  }
+  
+  .header-inner-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    min-height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  .header-main-menu {
+    font-size: 14px !important;
+    gap: 15px !important;
+  }
+  
+  .main-header-section {
+    padding-top: 0 !important;
+  }
+  
+  .header-section {
+    min-height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    display: none !important;
+  }
+  
+  .header-right-box {
+    display: none !important;
+  }
+  
+  .header-menu {
+    flex-basis: 100% !important; /* Menu chiếm toàn bộ width */
+  }
+  
+  .header-main-menu {
+    font-size: 12px !important;
+    gap: 10px !important;
+  }
+  
+  .header-inner-section {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    min-height: 55px !important;
+  }
+  
+  .main-header-section {
+    padding-top: 0 !important;
+  }
+  
+  .header-section {
+    min-height: 55px !important;
+  }
 }
